@@ -1,0 +1,3 @@
+build_dita2overrides.xml linguist-language=Ant Build System
+sample/* linguist-vendored
+test/* linguist-vendored
