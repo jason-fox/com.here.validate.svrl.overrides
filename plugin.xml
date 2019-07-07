@@ -8,12 +8,10 @@
 		This plugin is based on and 'extends' the plugin named below.
 	-->
 	<require plugin="com.here.validate.svrl"/>
+	
 	<!--
 		Add new value to list of valid transformation type names.
 	-->
-	<feature extension="dita.conductor.transtype.check" value="overrides"/>
-	<feature extension="dita.conductor.transtype.check" value="overrides-echo"/>
-	<feature extension="dita.xsl.strings" file="cfg/common/vars/strings.xml"/>
 	<transtype abstract="false" desc="Extended ruleset DITA validation" name="overrides">
 		<param desc="Specifies the customization directory." name="svrl.customization.dir" type="dir"/>
 		<param desc="Specifies the ruleset file to use." name="svrl.ruleset.file" type="file"/>
@@ -34,6 +32,8 @@
 			<val desc="Output does not highlight errors and warnings">false</val>
 		</param>
 	</transtype>
+	<!-- Import the overrides transform's ANT file -->
 	<feature extension="ant.import" file="build_dita2overrides.xml"/>
-
+	<!-- Ensure the plugin's error and logging messages are available -->
+	<feature extension="dita.xsl.strings" file="cfg/common/vars/strings.xml"/>
 </plugin>
