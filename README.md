@@ -69,6 +69,9 @@ General XML validation rules require that:
 
 ## Validator compliant DITA
 
+<a href="https://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html"><img src="https://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/dita_oasis_logo.jpg" align="right" height="55"></a>
+
+
 The DITA Validator extends the concept of XML validation to run a series of compliance rules. Sample rules include:
 
 -   Whether the source files for `<image>` and `<codeblock>` elements exist
