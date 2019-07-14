@@ -93,6 +93,8 @@ can also be run safely against DITA-OT 2.x.
 
 ## Installing DITA-OT
 
+<a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
+
 The Extended Validator is a plug-in for the DITA open toolkit. Futhermore, it is not a stand alone plug-in as it extends
 the base validator plug-in.
 
@@ -128,6 +130,8 @@ dita -install https://github.com/jason-fox/com.here.validate.svrl.overrides/arch
 ```
 
 The `dita` command line tool requires no additional configuration.
+
+---
 
 # Usage
 
