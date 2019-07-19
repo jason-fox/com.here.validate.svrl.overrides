@@ -116,19 +116,14 @@ unzip -q dita-ot-3.3.zip
 rm dita-ot-3.3.zip
 ```
 
-## Installing the Base Validator Plug-in
-
--   Run the plug-in installation command:
-
-```console
-dita -install https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
-```
 
 ## Installation the Extended Validator Plug-in
 
--   Run the plug-in installation command:
+-   Run the plug-in installation commands:
 
 ```console
+dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+dita -install https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
 dita -install https://github.com/jason-fox/com.here.validate.svrl.overrides/archive/master.zip
 ```
 
@@ -225,9 +220,9 @@ Error: Errors detected during validation
 -   `args.validate.ignore.rules` - Comma separated list of rules not to be enforced
 -   `args.validate.blacklist` - Comma separated list of words not to be present in the running text
 -   `args.validate.check.case` - Comma separated list of words which have a specified capitalization
--   `args.validate.mode` - Validation reporting mode. The following values are supported: 
-    -  `strict` - Outputs both warnings and errors. Fails on errors and warnings. 
-    -  `default` - Outputs both warnings and errors. Fails on errors only 
+-   `args.validate.mode` - Validation reporting mode. The following values are supported:
+    -  `strict` - Outputs both warnings and errors. Fails on errors and warnings.
+    -  `default` - Outputs both warnings and errors. Fails on errors only
     -  `lax` - Ignores all warnings and outputs errors only. Fails on Errors only
     -  `report` - Creates an SVRL file
 -   `svrl.customization.dir` - Specifies the customization directory
@@ -548,6 +543,6 @@ PRs accepted.
 
 # License
 
-[Apache 2.0](LICENSE) © 2018 HERE Europe B.V.
+[Apache 2.0](LICENSE) © 2018-2019 HERE Europe B.V.
 
 See the [LICENSE](LICENSE) file in the root of this project for license details.
