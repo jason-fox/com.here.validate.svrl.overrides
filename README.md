@@ -21,14 +21,14 @@ ruleset to suit their individual business case. Like the base
 results to the command line or return a report in Schematron Validation Report Language (SVRL) format. More information
 about SVRL can be found at [www.schematron.com](http://www.schematron.com/validators.html)
 
-# Table of Contents
+<details>
+<summary><strong>Table of Contents</strong></summary>
 
 -   [Background](#background)
     -   [What Is Valid XML?](#what-is-valid-xml)
     -   [Validator compliant DITA](#validator-compliant-dita)
 -   [Install](#install)
     -   [Installing DITA-OT](#installing-dita-ot)
-    -   [Installing the Base Validator Plug-in](#installing-the-base-validator-plug-in)
     -   [Installation the Extended Validator Plug-in](#installation-the-extended-validator-plug-in)
 -   [Usage](#usage)
     -   [Validating a document from the Command line](#validating-a-document-from-the-command-line)
@@ -50,6 +50,8 @@ about SVRL can be found at [www.schematron.com](http://www.schematron.com/valida
     -   [Structure Validation](#structure-validation)
 -   [Contribute](#contribute)
 -   [License](#license)
+
+</details>
 
 # Background
 
