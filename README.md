@@ -53,9 +53,9 @@ about SVRL can be found at [www.schematron.com](http://www.schematron.com/valida
 
 </details>
 
-# Background
+## Background
 
-## What Is Valid XML?
+### What Is Valid XML?
 
 For any DITA publication to build successfully, all its files must contain valid DITA markup.
 
@@ -68,7 +68,7 @@ General XML validation rules require that:
 -   A single root element contains all the other elements.
 -   Each `<topic>` within document must conform to the `topic.dtd` Document Type Defintion
 
-## Validator compliant DITA
+### Validator compliant DITA
 
 <a href="https://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html"><img src="https://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/dita_oasis_logo.jpg" align="right" height="55"></a>
 
@@ -88,14 +88,14 @@ The DITA Validator extends the concept of XML validation to run a series of comp
 The extended plug-in shows how to add additional rules, and includes some extra rules which may or may not be applicable
 to your documentation set.
 
-# Install
+## Install
 
 The Extended validator has been tested against DITA-OT 3.0.x. It is recommended that you upgrade to the latest version.
 Running the validator plug-in against DITA-OT 1.8.5 or earlier versions of DITA-OT will not work as it uses the newer
 `getVariable` template. To work with DITA-OT 1.8.5 this would need to be refactored to use `getMessage`. The validator
 can also be run safely against DITA-OT 2.x.
 
-## Installing DITA-OT
+### Installing DITA-OT
 
 <a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
 
@@ -118,7 +118,7 @@ rm dita-ot-3.3.4.zip
 ```
 
 
-## Installation the Extended Validator Plug-in
+### Installation the Extended Validator Plug-in
 
 -   Run the plug-in installation commands:
 
@@ -132,13 +132,13 @@ The `dita` command line tool requires no additional configuration.
 
 ---
 
-# Usage
+## Usage
 
-## Validating a document from the Command line
+### Validating a document from the Command line
 
 A test document can be found within the plug-in at `dita_docs/dita_ot/plugins/com.here.validate.svrl.overrides/sample`
 
-### Creating an SVRL file
+#### Creating an SVRL file
 
 To create an SVRL file with this **extended** plug-in (where the results will include overriden rules) use the
 `overrides` transform. This transform is an override of the base SVRL file creation (`svrl`) transform.
@@ -177,7 +177,7 @@ Once the command has run, an SVRL file is created
 </svrl:schematron-output>
 ```
 
-### Echoing results to the command line
+#### Echoing results to the command line
 
 To echo results to the command line with this **extended** plug-in (where the results will include overriden rules) use
 the `overrides` transform without specifying a `report`. This transform is an override of the base DITA document
@@ -229,7 +229,7 @@ Error: Errors detected during validation
 -   `svrl.customization.dir` - Specifies the customization directory
 -   `svrl.filter.file` - Specifies the location of the XSL file used to filter the echo output
 
-## Validating a document using Ant
+### Validating a document using Ant
 
 An Ant build file is supplied in the same directory as the sample document. The main target can be seen below:
 
@@ -259,9 +259,9 @@ An Ant build file is supplied in the same directory as the sample document. The 
 </target>
 ```
 
-# Customizing the Validator
+## Customizing the Validator
 
-## Adding New Validator Rules
+### Adding New Validator Rules
 
 The file `dita2svrl.xsl` within the `com.here.validate.svrl.overrides` overrides the base-rule set, and uses its own
 Customizations:
@@ -376,15 +376,15 @@ Now add the messages into language files found within the `cfg/common/vars` dire
 </vars>
 ```
 
-## Ignoring Validator Rules
+### Ignoring Validator Rules
 
-### Removing validator rules globally
+#### Removing validator rules globally
 
 This DITA-OT plug-in is an extension of the [base DITA validator](https://github.com/jason-fox/com.here.validate.svrl)
 and includes an example within its XSL files to show how to remove rules globally. Please examine the code to see how to
 do this.
 
-### Ignoring a validator rule throughout a document
+#### Ignoring a validator rule throughout a document
 
 Individual rules can be ignored by adding the `args.validate.ignore.rules` parameter to the command line. The value of
 the parameter should be a comma-delimited list of each `rule-id` to ignore.
@@ -395,7 +395,7 @@ For example to ignore the `table-id-missing` validation rule within a document y
 /path-to-dita-ot/dita -f svrl-echo -i document.ditamap -Dargs.validate.ignore.rules=table-id-missing
 ```
 
-### Ignoring a specific instance of a validator rule
+#### Ignoring a specific instance of a validator rule
 
 Specific instances of a rule can be ignored by adding a comment within the `*.dita` file. The comment should start with
 `ignore-rule`, and needs to be added at the location where the error is flagged.
@@ -436,7 +436,7 @@ Some rules such as FIXME and TODO in the running text need to be double escaped 
 </p>
 ```
 
-# Sample Document
+## Sample Document
 
 A sample document can be found within the plug-in which can used to test validator rules. The document covers with
 positive and negative test cases. The sample document contains broken DITA which cannot be built as a PDF document -
@@ -467,14 +467,17 @@ The `<topic>` files are sorted as follows:
 
 Note that **extended** rules will only be detected if the `overrides` transform from this plug-in is used.
 
-# Validator Error Messages
+## Validator Error Messages
 
 The following tables list the validator error messages by type and message ID. Existing
 [Base DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) are in normal text. Rules in **bold** are
 only be detected if the `overrides` transform from the
 [Extended DITA Validator](https://github.com/jason-fox/com.here.validate.svrl.overrides) is used.
 
-## Content Validation
+<a name="content-validation"/>
+
+<details>
+<summary><strong>Content Validation</strong></summary>
 
 | Message ID               | Message                                                                                                             | Corrective Action/Comment                                                                                                                |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -486,7 +489,12 @@ only be detected if the `overrides` transform from the
 | running-text-lorem-ipsum | Found dummy text in this <\{name\}\> element, remove or replace with valid content.                                 | Replace the standard lorem ipsum filler text with the correct information.                                                               |
 | running-text-todo        | Found 'TODO' comments in the following text in this <\{name\}\> element - fix as requested and delete the comment.  | Replace the draft content with the correct information.                                                                                  |
 
-## Style Validation
+</details>
+
+<a name="style-validation"/>
+<details>
+<summary><strong>Style Validation</strong></summary>
+
 
 | Message ID                    | Message                                                                                                                                                       | Corrective Action/Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -506,7 +514,12 @@ only be detected if the `overrides` transform from the
 | topic-file-mismatch           | The value specified in id="\{name\}" does not match the file name: \{file_name\}. Make sure the `id` value and the file name are the same.                    | In order to assist with search engine optimization \(SEO\) of content, the `id` for `<topic>` elements must be the same as the file name, which also ends up by the name of the HTML file. For more information on topics, see [topic](http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html). For more information on element 'id`s', see [id](http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | xref-no-format                | Always provide a format attribute in `<xref>` elements, \(for example, format="dita" or format="html"\).                                                      | Specify a value for the `format` attribute for `<xref>` elements. Examples of valid values include `dita`, `html`, and `pdf`. For more information on `<xref>` elements, see [xref](http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-## Structure Validation
+</details>
+
+<a name="structure-validation"/>
+
+<details>
+<summary><strong>Structure Validation</strong></summary>
 
 | Message ID                              | Message                                                                                                                                                                                                                                                                                                                                                                       | Corrective Action/Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -538,11 +551,13 @@ only be detected if the `overrides` transform from the
 | xref-www-format-invalid                 | `<xref href="..." format="dita">` The specified value points to an external file and cannot have the attribute key/value pair format="dita". Change the format value as appropriate \(for example, format="html"\).                                                                                                                                                           | Specify a value for the `format` attribute for `<xref>` elements. Examples of valid values include `dita`, `html`, and `pdf`. For more information on `<xref>` elements, see [xref](http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | xref-www-scope-invalid                  | `<xref href="...">` The specified value points to an external file. Specify the attribute key/value pair scope="external".                                                                                                                                                                                                                                                    | The `href` attribute specifies a web page or similar target, which means the `scope` attribute must have the value `external`. Change the value as required. For more information on `<xref>` elements, see [xref](http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-# Contribute
+</details>
+
+## Contribute
 
 PRs accepted.
 
-# License
+## License
 
 [Apache 2.0](LICENSE) © 2018-2019 HERE Europe B.V.
 
