@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/jason-fox/com.here.validate.svrl.overrides.svg?branch=master)](https://travis-ci.org/jason-fox/com.here.validate.svrl.overrides)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/com.here.validate.svrl.overrides/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/com.here.validate.svrl.overrides?branch=master)
 
-The [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) plug-in is a[DITA-OT Plug-in](https://www.dita-ot.org/plugins) structure, style and content
+The [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) plug-in is a [DITA-OT Plug-in](https://www.dita-ot.org/plugins) structure, style and content
 checker for DITA documents. The base [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) returns
 information about the compliance of the document against a modifiable series of validator rules. The plug-in also
 supports standard XML validation.
