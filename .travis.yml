@@ -32,7 +32,7 @@ script:
 jobs:
   include:
     - stage: test
-      name: "Unit Tests: DITA_OT=3.3"
+      name: "Unit Tests: DITA_OT=3.4"
       env: DITA_OT=3.4
 
       before_script:
