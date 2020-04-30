@@ -1,15 +1,15 @@
 # Extended DITA Validator for DITA-OT
 
 [![license](https://img.shields.io/github/license/jason-fox/com.here.validate.svrl.overrides.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 3.4](https://img.shields.io/badge/DITA--OT-3.4-blue.svg)](http://www.dita-ot.org/3.4)
+[![DITA-OT 3.5](https://img.shields.io/badge/DITA--OT-3.5-blue.svg)](http://www.dita-ot.org/3.5)
 [![Build Status](https://travis-ci.org/jason-fox/com.here.validate.svrl.overrides.svg?branch=master)](https://travis-ci.org/jason-fox/com.here.validate.svrl.overrides)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/com.here.validate.svrl.overrides/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/com.here.validate.svrl.overrides?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.here.validate.svrl.overrides&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.here.validate.svrl.overrides)
 
-The [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) plug-in is a [DITA-OT Plug-in](https://www.dita-ot.org/plugins) structure, style and content
-checker for DITA documents. The base [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) returns
-information about the compliance of the document against a modifiable series of validator rules. The plug-in also
-supports standard XML validation.
+The [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) plug-in is a
+[DITA-OT Plug-in](https://www.dita-ot.org/plugins) structure, style and content checker for DITA documents. The base
+[DITA Validator](https://github.com/jason-fox/com.here.validate.svrl) returns information about the compliance of the
+document against a modifiable series of validator rules. The plug-in also supports standard XML validation.
 
 This plug-in is an **extension** of the base [DITA Validator](https://github.com/jason-fox/com.here.validate.svrl), and
 shows how to add, remove or extend the ruleset of the base
@@ -73,7 +73,6 @@ General XML validation rules require that:
 
 <a href="https://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html"><img src="https://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/dita_oasis_logo.jpg" align="right" height="55"></a>
 
-
 The DITA Validator extends the concept of XML validation to run a series of compliance rules. Sample rules include:
 
 -   Whether the source files for `<image>` and `<codeblock>` elements exist
@@ -104,29 +103,28 @@ The Extended Validator is a plug-in for the DITA open toolkit. Futhermore, it is
 the base validator plug-in.
 
 -   Full installation instructions for downloading DITA-OT can be found
-    [here](https://www.dita-ot.org/3.4/topics/installing-client.html).
+    [here](https://www.dita-ot.org/3.5/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.4.1.zip` package from the project website at
+    1.  Download the `dita-ot-3.5.zip` package from the project website at
         [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable. This defines the
         necessary environment variable to run the `dita` command from the command line.
 
 ```console
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.4.1/dita-ot-3.4.1.zip
-unzip -q dita-ot-3.4.1.zip
-rm dita-ot-3.4.1.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.5/dita-ot-3.5.zip
+unzip -q dita-ot-3.5.zip
+rm dita-ot-3.5.zip
 ```
-
 
 ### Installation the Extended Validator Plug-in
 
 -   Run the plug-in installation commands:
 
 ```console
-dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-dita -install https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
-dita -install https://github.com/jason-fox/com.here.validate.svrl.overrides/archive/master.zip
+dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+dita install https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
+dita install https://github.com/jason-fox/com.here.validate.svrl.overrides/archive/master.zip
 ```
 
 The `dita` command line tool requires no additional configuration.
@@ -223,10 +221,10 @@ Error: Errors detected during validation
 -   `args.validate.blacklist` - Comma separated list of words not to be present in the running text
 -   `args.validate.check.case` - Comma separated list of words which have a specified capitalization
 -   `args.validate.mode` - Validation reporting mode. The following values are supported:
-    -  `strict` - Outputs both warnings and errors. Fails on errors and warnings.
-    -  `default` - Outputs both warnings and errors. Fails on errors only
-    -  `lax` - Ignores all warnings and outputs errors only. Fails on Errors only
-    -  `report` - Creates an SVRL file
+    -   `strict` - Outputs both warnings and errors. Fails on errors and warnings.
+    -   `default` - Outputs both warnings and errors. Fails on errors only
+    -   `lax` - Ignores all warnings and outputs errors only. Fails on Errors only
+    -   `report` - Creates an SVRL file
 -   `svrl.customization.dir` - Specifies the customization directory
 -   `svrl.filter.file` - Specifies the location of the XSL file used to filter the echo output
 
@@ -495,7 +493,6 @@ only be detected if the `overrides` transform from the
 <a name="style-validation"/>
 <details>
 <summary><strong>Style Validation</strong></summary>
-
 
 | Message ID                    | Message                                                                                                                                                       | Corrective Action/Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
