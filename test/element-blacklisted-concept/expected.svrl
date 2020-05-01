@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl">
+  <failed-assert location="/concept" role="fatal">
+    <diagnostic-reference diagnostic="element-blacklisted">Line 4: concept[id="element-blacklisted-concept"] - [element-blacklisted] 
+The &lt;concept&gt; element is not compliant with our DITA documentation standards.</diagnostic-reference>
+  </failed-assert>
+</svrl:schematron-output>
+
