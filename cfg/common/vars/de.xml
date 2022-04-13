@@ -3,8 +3,8 @@
   This file is part of the Extended DITA validator project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<vars>
+<variables>
 	<variable id="element-blacklisted">Das &lt;@NAME&gt; Element entspricht nicht dem unsere DITA Dokumentationsstandard.</variable>
 	<variable id="id-blacklisted">ID-Werte dürfen nicht das Wort 'content' enthalten. Ändern Sie den iD-Wert.</variable>
 	<variable id="image-product-filtered-not-included">Verschieben Sie &lt;@NAME product=&quot;PARAM1&quot;&gt; in die Datei includes.dita und referenzieren Sie es durch eine conref-Referenz.</variable>
-</vars>
+</variables>
