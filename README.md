@@ -1,7 +1,7 @@
 # Extended DITA Validator for DITA-OT
 
 [![license](https://img.shields.io/github/license/jason-fox/com.here.validate.svrl.overrides.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 3.7](https://img.shields.io/badge/DITA--OT-3.7-blue.svg)](http://www.dita-ot.org/3.7)
+[![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-green.svg)](http://www.dita-ot.org/4.0)
 [![CI](https://github.com/jason-fox/com.here.validate.svrl.overrides/workflows/CI/badge.svg)](https://github.com/jason-fox/com.here.validate.svrl.overrides/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/com.here.validate.svrl.overrides/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/com.here.validate.svrl.overrides?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.here.validate.svrl.overrides&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.here.validate.svrl.overrides)
@@ -90,10 +90,10 @@ to your documentation set.
 
 ## Install
 
-The Extended validator has been tested against DITA-OT 3.0.x. It is recommended that you upgrade to the latest version.
+The Extended validator has been tested against DITA-OT 4.x. It is recommended that you upgrade to the latest version.
 Running the validator plug-in against DITA-OT 1.8.5 or earlier versions of DITA-OT will not work as it uses the newer
 `getVariable` template. To work with DITA-OT 1.8.5 this would need to be refactored to use `getMessage`. The validator
-can also be run safely against DITA-OT 2.x.
+can also be run safely against DITA-OT 2.x, DITA-OT 3.x and DITA-OT 4.x
 
 ### Installing DITA-OT
 
@@ -112,9 +112,9 @@ the base validator plug-in.
         necessary environment variable to run the `dita` command from the command line.
 
 ```console
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.7/dita-ot-3.7.zip
-unzip -q dita-ot-3.7.zip
-rm dita-ot-3.7.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.0/dita-ot-4.0.zip
+unzip -q dita-ot-4.0.zip
+rm dita-ot-4.0.zip
 ```
 
 ### Installation the Extended Validator Plug-in
