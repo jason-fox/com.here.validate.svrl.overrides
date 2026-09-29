@@ -18,7 +18,7 @@ jobs:
         with:
           dita-ot-version: '4.4'
           plugin: 'com.here.validate.svrl.overrides'
-          prerequisites: com.here.validate.svrl
+          prerequisites: https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
         # env:
         #  COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
       - uses: actions/upload-artifact@v7
